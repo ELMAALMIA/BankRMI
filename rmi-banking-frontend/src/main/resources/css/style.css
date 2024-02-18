@@ -1,0 +1,29 @@
+@font-face {
+font-family: "Inter";
+src: url("../fonts/interregular.ttf");
+}
+
+@font-face {
+font-family: "Inter";
+font-weight: bold;
+src: url("../fonts/interbold.ttf");
+}
+
+
+.bold{
+-fx-font-weight: bold;
+-fx-font-family: 'Inter';
+}
+
+.regular{
+-fx-font-family: 'Inter';
+}
+
+.textf{
+-fx-font-family: 'Inter';
+-fx-font-size: 15px;
+}
+
+.label{
+-fx-font-family: 'Inter';
+}
