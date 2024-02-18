@@ -1,13 +1,11 @@
 package estm.dsic;
 
+import estm.dsic.controller.DefaultAccountController;
 import estm.dsic.controller.AccountController;
-import estm.dsic.controller.IAccountController;
-import estm.dsic.controller.IUserController;
 import estm.dsic.controller.UserController;
-import estm.dsic.model.Account;
+import estm.dsic.controller.DefaultUserController;
 
 import java.rmi.Naming;
-import java.rmi.Remote;
 import java.rmi.registry.LocateRegistry;
 
 public class Main {
@@ -15,8 +13,8 @@ public class Main {
 
         try {
             LocateRegistry.createRegistry(5000);
-            IUserController userController = new UserController();
-            IAccountController accountController = new AccountController();
+            UserController userController = new DefaultUserController();
+            AccountController accountController = new DefaultAccountController();
             Naming.rebind("rmi://localhost:5000/login",userController);
            Naming.rebind("rmi://localhost:5000/account",accountController);
 
